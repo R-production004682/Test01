@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    void Start()
+    [SerializeField] private Animator animator;
+
+    void Start() => animator = GetComponent<Animator>();
+
+    private void Update()
     {
-       Debug.Log("Hello, World!");
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator?.SetTrigger("IsAttack");
+        }
     }
+
 }
