@@ -4,7 +4,15 @@ public class Test : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    void Start() => animator = GetComponent<Animator>();
+    private void Start() 
+    {
+        animator = GetComponent<Animator>();
+
+        if(animator == null)
+        {
+            Debug.LogError("Animator no setting");
+        }
+    }
 
     private void Update()
     {
@@ -13,5 +21,4 @@ public class Test : MonoBehaviour
             animator?.SetTrigger("IsAttack");
         }
     }
-
 }
