@@ -12,6 +12,10 @@ public class Test : MonoBehaviour
         {
             Debug.LogError("Animator no setting");
         }
+
+
+        Debug.Log("‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ");
+
     }
 
     private void Update()
